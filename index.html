@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Farewell Invitation — Farewell 2025</title>
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --accent:#f6c85f; --muted:#9aa4b2;
+      --glass: rgba(255,255,255,0.03);
+      --maxw:1000px;
+    }
+    *{box-sizing:border-box;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;}
+    body{margin:0; background:linear-gradient(180deg,#071026 0%, #08122a 60%); color:#e6eef6; min-height:100vh; display:flex; align-items:center;justify-content:center;padding:24px;}
+    .wrap{width:100%;max-width:var(--maxw); background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border-radius:14px; box-shadow:0 10px 30px rgba(2,6,23,0.6); overflow:hidden; display:grid; grid-template-columns:1fr 420px; gap:0;}
+    @media(max-width:880px){ .wrap{grid-template-columns:1fr; } .side{order:2} }
+    .main{padding:36px;}
+    .hero{display:flex;align-items:center;gap:16px;}
+    .logo{width:82px;height:82px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#f08b3a);display:flex;align-items:center;justify-content:center;font-weight:700;color:#08122a;font-size:22px;box-shadow:0 6px 18px rgba(246,200,95,0.14);}
+    h1{margin:0;font-size:26px;}
+    p.lead{color:var(--muted);margin-top:10px;margin-bottom:18px;}
+    .details{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px;}
+    .badge{background:var(--glass);padding:12px;border-radius:10px;min-width:140px;}
+    .badge b{display:block;font-size:15px}
+    .message{margin-top:18px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02)); padding:16px;border-radius:10px;color:var(--muted)}
+    .btns{margin-top:18px;display:flex;gap:10px;flex-wrap:wrap}
+    .btn{background:var(--accent); color:#07122a; padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600;display:inline-block}
+    .btn.secondary{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+    .side{background:linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.01)); padding:28px; display:flex;flex-direction:column;gap:16px;align-items:center;justify-content:center}
+    .count{font-size:38px;font-weight:700;color:var(--accent)}
+    .program{width:100%; background:rgba(255,255,255,0.02); padding:12px;border-radius:8px;color:var(--muted)}
+    .photos{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:10px;width:100%}
+    .photos img{width:100%;height:90px;object-fit:cover;border-radius:8px;display:block}
+    footer{width:100%;text-align:center;color:var(--muted);font-size:13px;padding:12px 0}
+    /* small RSVP modal */
+    .modal{position:fixed;left:0;top:0;width:100%;height:100%;display:none;align-items:center;justify-content:center;background:rgba(2,6,23,0.6);z-index:60}
+    .modal .card{background:#071026;padding:22px;border-radius:12px;max-width:420px;width:92%}
+    .close{background:transparent;border:0;color:var(--muted);float:right;font-size:18px}
+    label{display:block;font-size:13px;color:var(--muted);margin-top:10px}
+    input,textarea{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit; margin-top:6px}
+  </style>
+</head>
+<body>
+  <div class="wrap" role="main">
+    <div class="main">
+      <div class="hero">
+        <div class="logo">F</div>
+        <div>
+          <h1>Farewell 2025 — A Warm Goodbye</h1>
+          <p class="lead">Join us to celebrate the memories we made together. Let's make the last day unforgettable!</p>
+        </div>
+      </div>
+
+      <div class="details">
+        <div class="badge"><b>Date</b> Sat, March 21, 2025</div>
+        <div class="badge"><b>Time</b> 5:00 PM — 9:00 PM</div>
+        <div class="badge"><b>Venue</b> School Auditorium</div>
+      </div>
+
+      <div class="message">
+        <strong>Invitation:</strong>
+        <p style="margin:8px 0 0">Dear Seniors and Teachers, we cordially invite you to our Farewell Ceremony. Expect cultural performances, speeches, and a short awards segment. Dress code: Semi-formal.</p>
+      </div>
+
+      <div class="btns">
+        <a class="btn" href="#program" onclick="document.getElementById('program').scrollIntoView({behavior:'smooth'})">See Program</a>
+        <a class="btn secondary" href="https://forms.gle/REPLACE_WITH_YOUR_GOOGLE_FORM" target="_blank" rel="noopener">RSVP / Confirm</a>
+        <a class="btn secondary" href="mailto:organizer@example.com?subject=RSVP%20Farewell%202025">Email RSVP</a>
+      </div>
+
+      <section id="program" style="margin-top:20px">
+        <h3 style="margin:0 0 10px">Program Schedule</h3>
+        <div class="program">
+          <div><strong>5:00 PM</strong> — Welcome & Lighting the Lamp</div>
+          <div><strong>5:20 PM</strong> — Cultural Performances</div>
+          <div><strong>7:00 PM</strong> — Speeches & Awards</div>
+          <div><strong>8:00 PM</strong> — Group Photo & Dinner</div>
+        </div>
+      </section>
+
+      <footer>
+        Created with ♥ by the Farewell Committee · Update the content in <code>index.html</code>
+      </footer>
+    </div>
+
+    <aside class="side">
+      <div style="text-align:center">
+        <div style="font-size:13px;color:var(--muted)">Days to Farewell</div>
+        <div class="count" id="days">--</div>
+      </div>
+
+      <div style="width:100%">
+        <h4 style="margin:0 0 8px">Highlights</h4>
+        <div class="photos">
+          <img src="https://via.placeholder.com/400x300?text=Photo+1" alt="">
+          <img src="https://via.placeholder.com/400x300?text=Photo+2" alt="">
+          <img src="https://via.placeholder.com/400x300?text=Photo+3" alt="">
+          <img src="https://via.placeholder.com/400x300?text=Photo+4" alt="">
+        </div>
+      </div>
+
+      <div style="width:100%;text-align:center;margin-top:8px">
+        <button class="btn" onclick="openModal()">Quick RSVP</button>
+      </div>
+    </aside>
+  </div>
+
+  <!-- RSVP modal -->
+  <div class="modal" id="modal">
+    <div class="card">
+      <button class="close" onclick="closeModal()">✕</button>
+      <h3>Quick RSVP</h3>
+      <p style="color:var(--muted);margin-top:6px">Fill and submit — or use the full RSVP form link.</p>
+      <label for="name">Name</label>
+      <input id="name" />
+      <label for="email">Email / Phone</label>
+      <input id="email" />
+      <label for="msg">Message (optional)</label>
+      <textarea id="msg" rows="3"></textarea>
+      <div style="margin-top:10px;text-align:right">
+        <button class="btn secondary" onclick="closeModal()">Cancel</button>
+        <button class="btn" onclick="submitRSVP()">Submit</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // countdown
+    const target = new Date('2025-03-21T17:00:00'); // edit date/time here (YYYY-MM-DDTHH:MM:SS)
+    function updateDays(){
+      const diff = target - new Date();
+      const days = Math.max(0, Math.floor(diff/86400000));
+      document.getElementById('days').textContent = days + ' days';
+    }
+    updateDays(); setInterval(updateDays, 60_000);
+
+    // modal handling
+    function openModal(){ document.getElementById('modal').style.display='flex' }
+    function closeModal(){ document.getElementById('modal').style.display='none' }
+
+    function submitRSVP(){
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      if(!name || !email){ alert('Please add your name and contact.'); return; }
+      // This is a placeholder action — replace with actual form submission or webhook
+      alert('Thank you, ' + name + '! We got your RSVP. (This is a demo action.)');
+      closeModal();
+    }
+  </script>
+</body>
+</html>
